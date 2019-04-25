@@ -21,7 +21,7 @@ var topScores = [
                  {name:"Hillary Clinton", time:400},
                  {name:"Jeb Bush", time:500},
                  {name:"Donald Trump", time:600}
-                 ]
+								]
 
 
 function initGame(size) { 
@@ -40,6 +40,14 @@ function vulSpeelveld(size){
 	// moet een karakter toegewezen worden. Hiervoor kan de nextletter functie
 	// gebruikt worden. Ook moet de eventlistener cardClicked aan de cell gekoppeld worden
 	// en de opmaak juist gezet worden.
+	let speelveld = document.getElementById("speelveld");
+	for (let i=0; i<size; i++) {
+		let tr = speelveld.insertRow()
+		for (let i=0; i<size; i++) {
+			td = tr.insertCell()
+			td.appendChild(document.createTextNode('Cell'));
+		}
+	}
 }
 
 function showScores(){

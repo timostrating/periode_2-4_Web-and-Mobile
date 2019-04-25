@@ -1,0 +1,59 @@
+<script> console.log("OPGAVE 1") 
+
+a()
+b()
+c()
+
+console.log('foo1: ' + foo1)
+console.log('foo2: ' + foo2)
+console.log('foo3: ' + foo3)
+
+function a() {
+    foo1 = '1'  // scope is de hele main
+}
+
+function b() {
+    var foo2 = '2' // scope is de functie
+}
+
+function c() {
+    let foo3 = '3' // scope is de dichtsbij gelegen haakjes
+}
+</script>
+
+
+
+<script> console.log("OPGAVE 2") 
+
+function letTest() {
+  let x = 31;
+  if (true) {
+    let x = 71;  // different variable
+    console.log(x);  // 71
+  }
+  console.log(x);  // 31
+}
+
+letTest()
+</script>
+
+
+
+<script> console.log("OPGAVE 3") 
+
+function demoFunction(...z) { // variatic function, a function that can take any number of parameters
+    console.log(`Het totaal van deze ${z.length} waarden is ${z.reduce( (a,b) => a+=b )}`)
+}
+
+demoFunction(1,2,3) 
+// Het totaal van deze 3 waarden is 6
+
+demoFunction(3,4,5,6,7)
+//Het totaal van deze 5 waarden is 25
+
+demoFunction(2,4,6,8)
+//Het totaal van deze 4 waarden is 20
+
+demoFunction(1,3,5,7,9,11)
+//Het totaal van deze 6 waarden is 36
+</script>
